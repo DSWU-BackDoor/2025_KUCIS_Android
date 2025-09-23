@@ -240,71 +240,12 @@ fun BottomNavigationBar() {
     ) {
         BottomNavItem(
             icon = {
-                Box(
-                    modifier = Modifier.size(24.dp),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Column(
-                        verticalArrangement = Arrangement.spacedBy(3.dp)
-                    ) {
-                        Row(
-                            horizontalArrangement = Arrangement.spacedBy(3.dp)
-                        ) {
-                            Box(
-                                modifier = Modifier
-                                    .size(8.dp)
-                                    .drawWithContent {
-                                        drawContent()
-                                        drawRoundRect(
-                                            color = androidx.compose.ui.graphics.Color(0xFF333333),
-                                            style = Stroke(width = 1.5.dp.toPx()),
-                                            cornerRadius = CornerRadius(1.dp.toPx())
-                                        )
-                                    }
-                            )
-                            Box(
-                                modifier = Modifier
-                                    .size(8.dp)
-                                    .drawWithContent {
-                                        drawContent()
-                                        drawRoundRect(
-                                            color = androidx.compose.ui.graphics.Color(0xFF333333),
-                                            style = Stroke(width = 1.5.dp.toPx()),
-                                            cornerRadius = CornerRadius(1.dp.toPx())
-                                        )
-                                    }
-                            )
-                        }
-                        Row(
-                            horizontalArrangement = Arrangement.spacedBy(3.dp)
-                        ) {
-                            Box(
-                                modifier = Modifier
-                                    .size(8.dp)
-                                    .drawWithContent {
-                                        drawContent()
-                                        drawRoundRect(
-                                            color = androidx.compose.ui.graphics.Color(0xFF333333),
-                                            style = Stroke(width = 1.5.dp.toPx()),
-                                            cornerRadius = CornerRadius(1.dp.toPx())
-                                        )
-                                    }
-                            )
-                            Box(
-                                modifier = Modifier
-                                    .size(8.dp)
-                                    .drawWithContent {
-                                        drawContent()
-                                        drawRoundRect(
-                                            color = androidx.compose.ui.graphics.Color(0xFF333333),
-                                            style = Stroke(width = 1.5.dp.toPx()),
-                                            cornerRadius = CornerRadius(1.dp.toPx())
-                                        )
-                                    }
-                            )
-                        }
-                    }
-                }
+                Icon(
+                    painter = painterResource(id = R.drawable.home),
+                    contentDescription = "Home",
+                    tint = Color.Black,
+                    modifier = Modifier.size(24.dp)
+                )
             },
             label = "Home",
             isSelected = true,
@@ -313,7 +254,7 @@ fun BottomNavigationBar() {
         BottomNavItem(
             icon = {
                 Icon(
-                    Icons.Default.Edit,
+                    painter = painterResource(id = R.drawable.write),
                     contentDescription = "Write",
                     tint = Color(0xFF999999),
                     modifier = Modifier.size(24.dp)
@@ -329,7 +270,7 @@ fun BottomNavigationBar() {
         BottomNavItem(
             icon = {
                 Icon(
-                    Icons.Default.Settings,
+                    painter = painterResource(id = R.drawable.setting),
                     contentDescription = "Settings",
                     tint = Color(0xFF999999),
                     modifier = Modifier.size(24.dp)
