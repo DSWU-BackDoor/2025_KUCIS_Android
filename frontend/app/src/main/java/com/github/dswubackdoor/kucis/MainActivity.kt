@@ -1,4 +1,4 @@
-package com.example.pp
+package com.github.dswubackdoor.kucis
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -20,12 +20,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.pp.ui.theme.PpTheme
+import com.github.dswubackdoor.kucis.ui.theme.KUCISAndroidTheme
 
 data class Message(
     val title: String,
@@ -38,7 +40,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            PpTheme {
+            KUCISAndroidTheme {
                 MessageListScreen()
             }
         }
@@ -251,32 +253,24 @@ fun BottomNavigationBar() {
                             Box(
                                 modifier = Modifier
                                     .size(8.dp)
-                                    .background(
-                                        Color.Transparent,
-                                        RoundedCornerShape(1.dp)
-                                    )
                                     .drawWithContent {
                                         drawContent()
                                         drawRoundRect(
-                                            color = androidx.compose.ui.graphics.Color(0xFF999999),
-                                            style = androidx.compose.ui.graphics.drawscope.Stroke(width = 1.5.dp.toPx()),
-                                            cornerRadius = androidx.compose.ui.geometry.CornerRadius(1.dp.toPx())
+                                            color = androidx.compose.ui.graphics.Color(0xFF333333),
+                                            style = Stroke(width = 1.5.dp.toPx()),
+                                            cornerRadius = CornerRadius(1.dp.toPx())
                                         )
                                     }
                             )
                             Box(
                                 modifier = Modifier
                                     .size(8.dp)
-                                    .background(
-                                        Color.Transparent,
-                                        RoundedCornerShape(1.dp)
-                                    )
                                     .drawWithContent {
                                         drawContent()
                                         drawRoundRect(
-                                            color = androidx.compose.ui.graphics.Color(0xFF999999),
-                                            style = androidx.compose.ui.graphics.drawscope.Stroke(width = 1.5.dp.toPx()),
-                                            cornerRadius = androidx.compose.ui.geometry.CornerRadius(1.dp.toPx())
+                                            color = androidx.compose.ui.graphics.Color(0xFF333333),
+                                            style = Stroke(width = 1.5.dp.toPx()),
+                                            cornerRadius = CornerRadius(1.dp.toPx())
                                         )
                                     }
                             )
@@ -287,32 +281,24 @@ fun BottomNavigationBar() {
                             Box(
                                 modifier = Modifier
                                     .size(8.dp)
-                                    .background(
-                                        Color.Transparent,
-                                        RoundedCornerShape(1.dp)
-                                    )
                                     .drawWithContent {
                                         drawContent()
                                         drawRoundRect(
-                                            color = androidx.compose.ui.graphics.Color(0xFF999999),
-                                            style = androidx.compose.ui.graphics.drawscope.Stroke(width = 1.5.dp.toPx()),
-                                            cornerRadius = androidx.compose.ui.geometry.CornerRadius(1.dp.toPx())
+                                            color = androidx.compose.ui.graphics.Color(0xFF333333),
+                                            style = Stroke(width = 1.5.dp.toPx()),
+                                            cornerRadius = CornerRadius(1.dp.toPx())
                                         )
                                     }
                             )
                             Box(
                                 modifier = Modifier
                                     .size(8.dp)
-                                    .background(
-                                        Color.Transparent,
-                                        RoundedCornerShape(1.dp)
-                                    )
                                     .drawWithContent {
                                         drawContent()
                                         drawRoundRect(
-                                            color = androidx.compose.ui.graphics.Color(0xFF999999),
-                                            style = androidx.compose.ui.graphics.drawscope.Stroke(width = 1.5.dp.toPx()),
-                                            cornerRadius = androidx.compose.ui.geometry.CornerRadius(1.dp.toPx())
+                                            color = androidx.compose.ui.graphics.Color(0xFF333333),
+                                            style = Stroke(width = 1.5.dp.toPx()),
+                                            cornerRadius = CornerRadius(1.dp.toPx())
                                         )
                                     }
                             )
@@ -384,7 +370,7 @@ fun RowScope.BottomNavItem(
 @Preview(showBackground = true)
 @Composable
 fun MessageListScreenPreview() {
-    PpTheme {
+    KUCISAndroidTheme {
         MessageListScreen()
     }
 }
