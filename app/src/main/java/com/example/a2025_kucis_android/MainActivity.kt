@@ -1,4 +1,4 @@
- package com.example.a2025_kucis_android
+package com.example.a2025_kucis_android
 
 import android.os.Bundle
 import android.widget.Button
