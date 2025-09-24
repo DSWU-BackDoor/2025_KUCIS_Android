@@ -52,9 +52,7 @@ class MainActivity : ComponentActivity() {
 fun MessageListScreen() {
     var searchText by remember { mutableStateOf("") }
 
-    // TODO: 실제로는 다른 개발자가 구현할 글 쓰기 화면과 연동
-    // 예시: val messages by viewModel.messages.collectAsState()
-    // 또는: val messages = MessagesRepository.getAllMessages()
+    // TODO: 다른 개발자가 구현할 글 쓰기 화면과 연동
 
     // 현재는 빈 리스트로 시작 (실제 데이터는 글 쓰기 화면에서 추가됨)
     val allMessages = remember { mutableStateListOf<Message>() }
@@ -146,8 +144,7 @@ fun MessageListScreen() {
                 MessageItem(
                     message = message,
                     onClick = {
-                        // TODO: 다른 사람이 구현할 세부 페이지로 이동
-                        // 예: navigateToDetailPage(message.id)
+                        // TODO: 글 내용 페이지로 이동
                     }
                 )
             }
@@ -208,24 +205,6 @@ fun MessageItem(
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
-        }
-
-        // 글 수정 횟수 표시 (0이면 숨김)
-        if (message.editCount > 0) {
-            Box(
-                modifier = Modifier
-                    .size(24.dp)
-                    .clip(CircleShape)
-                    .background(Color(0xFF4285F4)),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = message.editCount.toString(),
-                    color = Color.White,
-                    fontSize = 12.sp,
-                    fontWeight = FontWeight.Bold
-                )
-            }
         }
     }
 }
