@@ -19,6 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "KUCIS Android"
+rootProject.name = "KUCIS"
 include(":app")
- 
