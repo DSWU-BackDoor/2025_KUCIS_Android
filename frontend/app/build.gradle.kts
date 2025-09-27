@@ -1,16 +1,19 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose.compiler)
 }
 
 android {
-    namespace = "com.example.draft"
+    namespace = "com.example.a2025_kucis_android"
     compileSdk = 36
     buildFeatures {
         viewBinding = true
+        compose = true
     }
+
     defaultConfig {
-        applicationId = "com.example.draft"
+        applicationId = "com.example.a2025_kucis_android"
         minSdk = 26
         targetSdk = 36
         versionCode = 1
@@ -39,6 +42,16 @@ android {
 
 dependencies {
 
+    val composeBom = platform("androidx.compose:compose-bom:2024.05.00")
+    implementation(composeBom)
+    androidTestImplementation(composeBom)
+
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.ui:ui-graphics")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    debugImplementation("androidx.compose.ui:ui-tooling")
+    implementation("androidx.compose.material3:material3")
+    implementation("androidx.activity:activity-compose:1.9.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

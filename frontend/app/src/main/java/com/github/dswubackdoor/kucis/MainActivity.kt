@@ -1,4 +1,4 @@
-package com.github.dswubackdoor.kucis
+package com.example.a2025_kucis_android
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -28,6 +28,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.github.dswubackdoor.kucis.ui.theme.KUCISAndroidTheme
+import androidx.compose.ui.res.painterResource
+import com.example.a2025_kucis_android.R
+
 
 data class Message(
     val title: String,
