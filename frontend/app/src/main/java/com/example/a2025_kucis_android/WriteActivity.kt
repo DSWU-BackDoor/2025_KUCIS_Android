@@ -1,10 +1,10 @@
-package com.example.draft
+package com.example.a2025_kucis_android
 
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.a2025_kucis_android.databinding.ActivityWriteBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.example.draft.databinding.ActivityWriteBinding // ViewBinding 사용을 위해 추가
 
 class WriteActivity : AppCompatActivity() {
 
