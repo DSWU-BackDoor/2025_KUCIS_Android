@@ -19,6 +19,9 @@ dependencyResolutionManagement {
     }
 }
 
+
 rootProject.name = "draft"
+
+rootProject.name = "KUCIS"
+
 include(":app")
- 
